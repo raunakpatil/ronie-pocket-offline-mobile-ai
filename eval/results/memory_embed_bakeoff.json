@@ -1,0 +1,50 @@
+[
+ {
+  "model": "all-MiniLM-L6-v2",
+  "r1": 0.2,
+  "r3": 0.2857142857142857,
+  "mrr": 0.29758461126111224,
+  "ms": 11.297871516301083,
+  "mb": 22.97237,
+  "dim": 384,
+  "licence": "Apache-2.0",
+  "file": "onnx/model_quantized.onnx",
+  "hinglish_r3": 0.5
+ },
+ {
+  "model": "bge-small-en-v1.5",
+  "r1": 0.7857142857142857,
+  "r3": 0.9571428571428572,
+  "mrr": 0.8702380952380954,
+  "ms": 3.918312146113469,
+  "mb": 34.014426,
+  "dim": 384,
+  "licence": "MIT",
+  "file": "onnx/model_quantized.onnx",
+  "hinglish_r3": 0.8
+ },
+ {
+  "model": "arctic-embed-xs",
+  "r1": 0.7142857142857143,
+  "r3": 0.9,
+  "mrr": 0.8174489795918369,
+  "ms": 1.7230033874511719,
+  "mb": 22.972992,
+  "dim": 384,
+  "licence": "Apache-2.0",
+  "file": "onnx/model_quantized.onnx",
+  "hinglish_r3": 0.7
+ },
+ {
+  "model": "EmbeddingGemma-300m",
+  "r1": 0.9571428571428572,
+  "r3": 0.9714285714285714,
+  "mrr": 0.9690476190476192,
+  "ms": 146.06681787050687,
+  "mb": 309.458498,
+  "dim": 768,
+  "licence": "Gemma terms",
+  "file": "onnx/model_quantized.onnx",
+  "hinglish_r3": 1.0
+ }
+]

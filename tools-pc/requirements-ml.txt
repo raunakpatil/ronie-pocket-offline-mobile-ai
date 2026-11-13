@@ -1,0 +1,7 @@
+# Installed in Phase 2 (bake-off) and Phase 3.5/10 (weight editing).
+# Install PyTorch first with the CUDA index URL from pytorch.org for your driver, then:
+transformers
+accelerate
+datasets
+safetensors
+onnxruntime

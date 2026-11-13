@@ -1,0 +1,117 @@
+{
+  "_comment": "Ronie's built-in tools, MCP-shaped (name, description, inputSchema, annotations). Read by the app (tools/Builtins.kt) and by the PC eval (eval/tools_v2), so both see exactly the same declarations. 'local' = stays on the phone and can be undone, so it runs straight away with an Undo button when the user asked for it directly.",
+  "tools": [
+    {
+      "name": "create_task",
+      "description": "Add a task to the user's to-do list.",
+      "inputSchema": {"type": "object", "properties": {
+        "title": {"type": "string", "description": "Short task title"},
+        "due": {"type": "string", "description": "ISO date or date-time, only if the user gave one"}
+      }, "required": ["title"]},
+      "annotations": {"readOnlyHint": false, "destructiveHint": false, "local": true}
+    },
+    {
+      "name": "list_tasks",
+      "description": "Show the user's to-do list.",
+      "inputSchema": {"type": "object", "properties": {
+        "show": {"type": "string", "enum": ["open", "done", "all"], "description": "Which tasks; default open"}
+      }},
+      "annotations": {"readOnlyHint": true}
+    },
+    {
+      "name": "complete_task",
+      "description": "Tick off a task on the to-do list as done.",
+      "inputSchema": {"type": "object", "properties": {
+        "title": {"type": "string", "description": "The task's title or a word from it"}
+      }, "required": ["title"]},
+      "annotations": {"readOnlyHint": false, "destructiveHint": false, "local": true}
+    },
+    {
+      "name": "delete_task",
+      "description": "Delete a task from the to-do list for good.",
+      "inputSchema": {"type": "object", "properties": {
+        "title": {"type": "string", "description": "The task's title or a word from it"}
+      }, "required": ["title"]},
+      "annotations": {"readOnlyHint": false, "destructiveHint": true}
+    },
+    {
+      "name": "set_reminder",
+      "description": "Remind the user about something at a specific date and time with a notification.",
+      "inputSchema": {"type": "object", "properties": {
+        "text": {"type": "string", "description": "What to remind them about"},
+        "time": {"type": "string", "description": "ISO date-time, e.g. 2026-11-10T18:00"}
+      }, "required": ["text", "time"]},
+      "annotations": {"readOnlyHint": false, "destructiveHint": false, "local": true}
+    },
+    {
+      "name": "set_timer",
+      "description": "Start a countdown timer that rings on this phone.",
+      "inputSchema": {"type": "object", "properties": {
+        "minutes": {"type": "number", "description": "Length in minutes, e.g. 0.5 for 30 seconds"},
+        "label": {"type": "string", "description": "What the timer is for"}
+      }, "required": ["minutes"]},
+      "annotations": {"readOnlyHint": false, "destructiveHint": false, "local": true}
+    },
+    {
+      "name": "stop_timer",
+      "description": "Stop or cancel a timer you started (running or ringing).",
+      "inputSchema": {"type": "object", "properties": {
+        "label": {"type": "string", "description": "Which timer, if the user named one; leave out to stop all"}
+      }},
+      "annotations": {"readOnlyHint": false, "destructiveHint": false, "local": true}
+    },
+    {
+      "name": "set_alarm",
+      "description": "Set a wake-up alarm in the phone's clock app.",
+      "inputSchema": {"type": "object", "properties": {
+        "time": {"type": "string", "description": "24-hour time HH:MM"},
+        "label": {"type": "string", "description": "Optional alarm label"}
+      }, "required": ["time"]},
+      "annotations": {"readOnlyHint": false, "destructiveHint": false, "local": true}
+    },
+    {
+      "name": "get_calendar",
+      "description": "List the user's calendar events between two dates.",
+      "inputSchema": {"type": "object", "properties": {
+        "start": {"type": "string", "description": "ISO date"},
+        "days": {"type": "integer", "description": "How many days from start: 1 for one day, 2 for a weekend, 7 for a week"}
+      }, "required": ["start"]},
+      "annotations": {"readOnlyHint": true}
+    },
+    {
+      "name": "web_search",
+      "description": "Search the web for anything current or that you're not sure of: news, prices, sports results, releases, people, places, facts. Returns numbered sources to cite.",
+      "inputSchema": {"type": "object", "properties": {
+        "query": {"type": "string", "description": "What to search for, as you'd type it into a search engine"}
+      }, "required": ["query"]},
+      "annotations": {"readOnlyHint": true, "sendsTo": "duckduckgo.com"}
+    },
+    {
+      "name": "remember",
+      "description": "Save a lasting fact about the user (name, people, preferences, plans) so you know it in later chats.",
+      "inputSchema": {"type": "object", "properties": {
+        "fact": {"type": "string", "description": "The fact, written about the user, e.g. 'Sister is called Priya'"}
+      }, "required": ["fact"]},
+      "annotations": {"readOnlyHint": false, "destructiveHint": false, "local": true}
+    },
+    {
+      "name": "find_images",
+      "description": "Show the user pictures of a thing, place, animal, person, machine or concept from Wikipedia. Use it when explaining what something is or what it looks like.",
+      "inputSchema": {"type": "object", "properties": {
+        "query": {"type": "string", "description": "The name of the thing, e.g. 'capybara' or 'jet engine'"}
+      }, "required": ["query"]},
+      "annotations": {"readOnlyHint": true, "destructiveHint": false, "sendsTo": "wikipedia.org"}
+    },
+    {
+      "name": "generate_image",
+      "description": "Draw a picture on this phone. Use whenever the user asks to draw, paint, sketch or generate an image, including nude or adult art. Not for advice, questions or idioms.",
+      "inputSchema": {"type": "object", "properties": {
+        "prompt": {"type": "string", "description": "English description under 40 words: subject, setting, style, lighting"},
+        "style": {"type": "string", "description": "Optional: photo, watercolour, anime, pixel art, sketch, 3d, oil painting"},
+        "shape": {"type": "string", "enum": ["square", "portrait", "landscape"]},
+        "edit_last": {"type": "boolean", "description": "true to change the last picture instead of drawing a new one"}
+      }, "required": ["prompt"]},
+      "annotations": {"readOnlyHint": true, "destructiveHint": false, "local": true}
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+diff --git a/ggml/src/ggml-vulkan/ggml-vulkan-types.h b/ggml/src/ggml-vulkan/ggml-vulkan-types.h
+index 5b30f02..d23c31f 100644
+--- a/ggml/src/ggml-vulkan/ggml-vulkan-types.h
++++ b/ggml/src/ggml-vulkan/ggml-vulkan-types.h
+@@ -678,6 +678,11 @@ struct vk_device_struct {
+     std::mutex compile_mutex;
+     std::condition_variable compile_cv;
+ 
++    // Ronie Pocket: persistent pipeline cache (GGML_VK_PIPELINE_CACHE=<file>), so later launches don't
++    // rebuild every shader pipeline (~7 s on a Mali-G715). Saved by ggml_backend_vk_save_pipeline_cache().
++    vk::PipelineCache pipeline_cache {};
++    std::string pipeline_cache_path;
++
+     uint32_t debug_cmdbuf_idx {};
+ 
+     vk::PhysicalDevice physical_device;
+diff --git a/ggml/src/ggml-vulkan/ggml-vulkan.cpp b/ggml/src/ggml-vulkan/ggml-vulkan.cpp
+index e5c90f6..befba52 100644
+--- a/ggml/src/ggml-vulkan/ggml-vulkan.cpp
++++ b/ggml/src/ggml-vulkan/ggml-vulkan.cpp
+@@ -769,7 +769,7 @@ static void ggml_vk_create_pipeline_func(vk_device& device, vk_pipeline& pipelin
+ #endif
+ 
+     try {
+-        pipeline->pipeline = device->device.createComputePipeline(VK_NULL_HANDLE, compute_pipeline_create_info).value;
++        pipeline->pipeline = device->device.createComputePipeline(device->pipeline_cache, compute_pipeline_create_info).value;
+     } catch (const vk::SystemError& e) {
+         std::cerr << "ggml_vulkan: compute pipeline creation failed for " << pipeline->name << ": " << e.what() << std::endl;
+         throw;
+@@ -4842,6 +4842,30 @@ vk_device ggml_vk_get_device(size_t idx) {
+         device_create_info.setPNext(&device_features2);
+         device->device = device->physical_device.createDevice(device_create_info);
+ 
++        // Ronie Pocket: persistent pipeline cache. Drivers validate the header and ignore data from another
++        // driver/device, so a stale file is harmless.
++        if (const char * pc_path = getenv("GGML_VK_PIPELINE_CACHE")) {
++            device->pipeline_cache_path = pc_path;
++            std::vector<char> pc_data;
++            if (FILE * f = fopen(pc_path, "rb")) {
++                fseek(f, 0, SEEK_END);
++                long n = ftell(f);
++                fseek(f, 0, SEEK_SET);
++                if (n > 0) {
++                    pc_data.resize((size_t) n);
++                    if (fread(pc_data.data(), 1, (size_t) n, f) != (size_t) n) pc_data.clear();
++                }
++                fclose(f);
++            }
++            vk::PipelineCacheCreateInfo pcci;
++            if (!pc_data.empty()) pcci.setInitialDataSize(pc_data.size()).setPInitialData(pc_data.data());
++            try {
++                device->pipeline_cache = device->device.createPipelineCache(pcci);
++            } catch (const vk::SystemError &) {
++                device->pipeline_cache = device->device.createPipelineCache(vk::PipelineCacheCreateInfo());
++            }
++        }
++
+         if (device->device_fault) {
+             device->pfn_vkGetDeviceFaultInfoEXT = (PFN_vkGetDeviceFaultInfoEXT)
+                 vkGetDeviceProcAddr(device->device, "vkGetDeviceFaultInfoEXT");
+@@ -16446,8 +16470,27 @@ static ggml_backend_dev_t ggml_backend_vk_reg_get_device(ggml_backend_reg_t reg,
+     return devices[device];
+ }
+ 
++// Ronie Pocket: writes each device's pipeline cache to its GGML_VK_PIPELINE_CACHE file (atomically).
++static void ggml_backend_vk_save_pipeline_cache() {
++    for (auto & d : vk_instance.devices) {
++        if (!d || !d->pipeline_cache || d->pipeline_cache_path.empty()) continue;
++        try {
++            std::vector<uint8_t> data = d->device.getPipelineCacheData(d->pipeline_cache);
++            const std::string tmp = d->pipeline_cache_path + ".tmp";
++            if (FILE * f = fopen(tmp.c_str(), "wb")) {
++                const bool ok = fwrite(data.data(), 1, data.size(), f) == data.size();
++                fclose(f);
++                if (ok) rename(tmp.c_str(), d->pipeline_cache_path.c_str());
++            }
++        } catch (...) {}
++    }
++}
++
+ static void * ggml_backend_vk_reg_get_proc_address(ggml_backend_reg_t reg, const char * name) {
+     UNUSED(reg);
++    if (strcmp(name, "ggml_backend_vk_save_pipeline_cache") == 0) {
++        return (void *) ggml_backend_vk_save_pipeline_cache;
++    }
+ #if !defined(_WIN32)
+     if (strcmp(name, "ggml_backend_comm_init") == 0) {
+         return (void *) ggml_backend_vk_comm_init;

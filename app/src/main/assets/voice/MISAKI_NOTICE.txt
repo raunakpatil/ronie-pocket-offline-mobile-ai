@@ -1,0 +1,2 @@
+Pronunciation dictionaries from misaki (https://github.com/hexgrad/misaki), Apache License 2.0.
+Converted to TSV by tools-pc/voice/build_lexicon.py.

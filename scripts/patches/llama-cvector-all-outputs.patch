@@ -1,0 +1,30 @@
+diff --git a/tools/cvector-generator/cvector-generator.cpp b/tools/cvector-generator/cvector-generator.cpp
+index af05031..d81e26b 100644
+--- a/tools/cvector-generator/cvector-generator.cpp
++++ b/tools/cvector-generator/cvector-generator.cpp
+@@ -338,6 +338,11 @@ static bool cb_eval(struct ggml_tensor * t, bool ask, void * user_data) {
+     if (!is_l_out || t->ne[1] != cb_data->n_tokens) {
+         return true;
+     }
++    // the final layer is ignored (now that every token is an output, it is no longer pruned away)
++    const char * dash = strrchr(t->name, '-');
++    if (dash && atoi(dash + 1) == cb_data->n_layers - 1) {
++        return true;
++    }
+ 
+     // save the tensor to current context
+     cb_data->save_tensor_for_layer(t);
+@@ -346,7 +351,12 @@ static bool cb_eval(struct ggml_tensor * t, bool ask, void * user_data) {
+ 
+ static bool get_hidden_layers(llama_context * ctx, std::vector<llama_token> & tokens) {
+     llama_memory_clear(llama_get_memory(ctx), true);
+-    common_batch batch = common_batch_get_one(ctx, tokens);
++    // Mark every token as an output: models that prune rows to the output ids
++    // (e.g. Gemma 4's KV-shared layers) would otherwise emit l_out with fewer rows.
++    common_batch batch(ctx);
++    for (size_t i = 0; i < tokens.size(); ++i) {
++        batch.add(tokens[i], (llama_pos) i, 0, true);
++    }
+     if (llama_process(ctx, LLAMA_PROCESS_TYPE_DECODE, batch.get())) {
+         fprintf(stderr, "%s : failed to eval\n", __func__);
+         return false;

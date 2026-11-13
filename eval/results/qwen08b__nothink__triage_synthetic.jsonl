@@ -1,0 +1,40 @@
+{"id": "triage_synthetic-000", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-001", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-002", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-003", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-004", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-005", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-006", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-007", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-008", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.06, "pred": "important"}
+{"id": "triage_synthetic-009", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-010", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-011", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-012", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-013", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-014", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-015", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-016", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-017", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-018", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-019", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-020", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-021", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-022", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-023", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-024", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-025", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-026", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.06, "pred": "important"}
+{"id": "triage_synthetic-027", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-028", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-029", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-030", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-031", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-032", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-033", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-034", "ok": true, "why": "ok", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-035", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-036", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-037", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.05, "pred": "important"}
+{"id": "triage_synthetic-038", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}
+{"id": "triage_synthetic-039", "ok": false, "why": "pred important", "content": "IMPORTANT", "tool_calls": [], "finish": "stop", "tokens": 2, "seconds": 0.04, "pred": "important"}

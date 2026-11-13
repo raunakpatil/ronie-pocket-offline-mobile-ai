@@ -1,0 +1,40 @@
+{"email": {"from": "security@google.example", "subject": "New sign-in to your Google Account", "snippet": "Your account was signed in on a new Windows device."}, "label": "important", "id": "triage_synthetic-000"}
+{"email": {"from": "ananya@gmail.example", "subject": "Can you pick me up at 7?", "snippet": "My car broke down near the office, can you come at 7?"}, "label": "important", "id": "triage_synthetic-001"}
+{"email": {"from": "passport@gov.example", "subject": "Passport appointment confirmed", "snippet": "Your appointment is on 25 Nov at 10:30 at PSK Pune."}, "label": "important", "id": "triage_synthetic-002"}
+{"email": {"from": "hospital@ruby.example", "subject": "Appointment reminder: cardiology tomorrow", "snippet": "Your cardiology appointment is tomorrow at 9 am."}, "label": "important", "id": "triage_synthetic-003"}
+{"email": {"from": "survey@brand.example", "subject": "Tell us how we did", "snippet": "Take a 2-minute survey."}, "label": "not_important", "id": "triage_synthetic-004"}
+{"email": {"from": "landlord.kulkarni@gmail.example", "subject": "Plumber visit Thursday", "snippet": "Plumber comes Thursday 10–12, please be home."}, "label": "important", "id": "triage_synthetic-005"}
+{"email": {"from": "news@times.example", "subject": "Morning briefing", "snippet": "Today's headlines."}, "label": "not_important", "id": "triage_synthetic-006"}
+{"email": {"from": "manager@company.example", "subject": "Need the deck before 5pm today", "snippet": "Can you send me the Q4 deck before 5pm? Client call moved up."}, "label": "important", "id": "triage_synthetic-007"}
+{"email": {"from": "bank-alerts@hdfc.example", "subject": "Suspicious login attempt on your account", "snippet": "We noticed a login from a new device in Delhi at 02:14. If this wasn't you, block your card now."}, "label": "important", "id": "triage_synthetic-008"}
+{"email": {"from": "accounts@electricity.example", "subject": "Final notice: bill overdue", "snippet": "Your electricity bill is overdue; supply may be disconnected on 20 Nov."}, "label": "important", "id": "triage_synthetic-009"}
+{"email": {"from": "court-summons@example", "subject": "Hearing date for your tenancy case", "snippet": "Your hearing is listed for 2 Dec."}, "label": "important", "id": "triage_synthetic-010"}
+{"email": {"from": "priya.patil@gmail.example", "subject": "Mum's birthday dinner — need your help", "snippet": "Can you book the cake for Saturday?"}, "label": "important", "id": "triage_synthetic-011"}
+{"email": {"from": "dr.mehta.clinic@example", "subject": "Your test results are ready", "snippet": "Please call the clinic to discuss your blood test results."}, "label": "important", "id": "triage_synthetic-012"}
+{"email": {"from": "ceo@company.example", "subject": "All-hands moved to 3pm today", "snippet": "Today's all-hands is now at 3pm."}, "label": "important", "id": "triage_synthetic-013"}
+{"email": {"from": "visa@embassy.example", "subject": "Visa application: documents missing", "snippet": "Please upload your bank statement within 5 days."}, "label": "important", "id": "triage_synthetic-014"}
+{"email": {"from": "recruiter@deepmind.example", "subject": "Interview invitation", "snippet": "We'd like to schedule a technical interview next week."}, "label": "important", "id": "triage_synthetic-015"}
+{"email": {"from": "hr@snorkel.example", "subject": "Action required: sign your offer letter by Friday", "snippet": "Please sign the attached offer by 14 Nov."}, "label": "important", "id": "triage_synthetic-016"}
+{"email": {"from": "app@fitness.example", "subject": "You haven't logged a workout in 3 days", "snippet": "Keep your streak going!"}, "label": "not_important", "id": "triage_synthetic-017"}
+{"email": {"from": "github@noreply.example", "subject": "Security alert: leaked token in your repository", "snippet": "A personal access token was found in a public commit."}, "label": "important", "id": "triage_synthetic-018"}
+{"email": {"from": "lottery-winner@scam.example", "subject": "Congratulations! You've won ₹50 lakh", "snippet": "Send your bank details to claim."}, "label": "not_important", "id": "triage_synthetic-019"}
+{"email": {"from": "promo@telco.example", "subject": "Upgrade to 5G unlimited", "snippet": "Just ₹399 per month."}, "label": "not_important", "id": "triage_synthetic-020"}
+{"email": {"from": "noreply@linkedin.example", "subject": "You appeared in 12 searches this week", "snippet": "See who's looking at your profile."}, "label": "not_important", "id": "triage_synthetic-021"}
+{"email": {"from": "events@meetup.example", "subject": "5 events near you this weekend", "snippet": "RSVP now."}, "label": "not_important", "id": "triage_synthetic-022"}
+{"email": {"from": "insurance@lic.example", "subject": "Policy premium due in 3 days", "snippet": "Your premium of ₹12,400 is due on 12 Nov."}, "label": "important", "id": "triage_synthetic-023"}
+{"email": {"from": "tax@incometax.example", "subject": "Notice under section 143(1)", "snippet": "A mismatch was found in your return; respond within 30 days."}, "label": "important", "id": "triage_synthetic-024"}
+{"email": {"from": "info@webinar.example", "subject": "Join our free webinar on productivity", "snippet": "Register now."}, "label": "not_important", "id": "triage_synthetic-025"}
+{"email": {"from": "newsletter@medium.example", "subject": "Your weekly digest", "snippet": "Top stories in AI this week."}, "label": "not_important", "id": "triage_synthetic-026"}
+{"email": {"from": "noreply@youtube.example", "subject": "New video from a channel you follow", "snippet": "Watch now."}, "label": "not_important", "id": "triage_synthetic-027"}
+{"email": {"from": "updates@spotify.example", "subject": "New releases for you", "snippet": "Fresh music picked for your taste."}, "label": "not_important", "id": "triage_synthetic-028"}
+{"email": {"from": "noreply@twitter.example", "subject": "Trending in India", "snippet": "See what's happening."}, "label": "not_important", "id": "triage_synthetic-029"}
+{"email": {"from": "rewards@credit.example", "subject": "You've earned 50 reward points", "snippet": "Redeem them in our store."}, "label": "not_important", "id": "triage_synthetic-030"}
+{"email": {"from": "hello@startup-newsletter.example", "subject": "Issue #212: funding roundup", "snippet": "This week's funding news."}, "label": "not_important", "id": "triage_synthetic-031"}
+{"email": {"from": "noreply@goindigo.example", "subject": "Flight rescheduled: 6E-512", "snippet": "Your flight departure has changed to 11:40."}, "label": "important", "id": "triage_synthetic-032"}
+{"email": {"from": "offers@airline.example", "subject": "Fly to Dubai from ₹9,999", "snippet": "Limited seats."}, "label": "not_important", "id": "triage_synthetic-033"}
+{"email": {"from": "school@dps.example", "subject": "Parent-teacher meeting on Saturday", "snippet": "Meeting with your child's class teacher on 14 Nov at 11 am."}, "label": "important", "id": "triage_synthetic-034"}
+{"email": {"from": "deals@shopsy.example", "subject": "🔥 70% OFF everything — today only!", "snippet": "Huge sale on fashion and electronics."}, "label": "not_important", "id": "triage_synthetic-035"}
+{"email": {"from": "store@amazon.example", "subject": "Recommended for you", "snippet": "Based on your browsing."}, "label": "not_important", "id": "triage_synthetic-036"}
+{"email": {"from": "promo@zomato.example", "subject": "Hungry? Flat ₹150 off", "snippet": "Order now and save."}, "label": "not_important", "id": "triage_synthetic-037"}
+{"email": {"from": "noreply@quora.example", "subject": "Answers you might like", "snippet": "Popular answers this week."}, "label": "not_important", "id": "triage_synthetic-038"}
+{"email": {"from": "marketing@bank.example", "subject": "Pre-approved personal loan just for you!", "snippet": "Get up to ₹10 lakh instantly."}, "label": "not_important", "id": "triage_synthetic-039"}

@@ -1,0 +1,2 @@
+# Byte-exact golden file for the Gemma template test: never convert line endings.
+app/src/test/resources/tools/*.txt -text

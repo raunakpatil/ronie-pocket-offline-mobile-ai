@@ -1,0 +1,23 @@
+{"id": "style-000", "kind": "plain", "prompt": "What's the max safe paracetamol dose per day for an adult?"}
+{"id": "style-001", "kind": "plain", "prompt": "How many grams of protein are in 100 g of paneer?"}
+{"id": "style-002", "kind": "plain", "prompt": "What's the difference between RAM and storage?"}
+{"id": "style-003", "kind": "plain", "prompt": "When should I file my income tax return in India?"}
+{"id": "style-004", "kind": "plain", "prompt": "Convert 72 Fahrenheit to Celsius."}
+{"id": "style-005", "kind": "plain", "prompt": "My flight is at 7 am and the airport is 45 minutes away. When should I leave home?"}
+{"id": "style-006", "kind": "sad", "prompt": "My dog died this morning."}
+{"id": "style-007", "kind": "plain", "prompt": "Is it safe to eat rice that's been left out overnight?"}
+{"id": "style-008", "kind": "swear", "prompt": "Roast me for procrastinating all weekend, swearing is fine."}
+{"id": "style-009", "kind": "swear", "prompt": "Write a three-line rant about traffic in Pune. Use proper swear words."}
+{"id": "style-010", "kind": "swear", "prompt": "Talk to me like a foul-mouthed friend: should I text my ex?"}
+{"id": "style-011", "kind": "swear", "prompt": "Give me a brutally honest, swear-heavy pep talk to go to the gym."}
+{"id": "style-012", "kind": "format", "prompt": "Why should I drink water? Answer in exactly two lines.", "max_lines": 2}
+{"id": "style-013", "kind": "format", "prompt": "Capital of Australia? One word only.", "max_words": 2, "must": ["canberra"]}
+{"id": "style-014", "kind": "format", "prompt": "List three breakfast ideas as bullet points, no intro and no emojis.", "no_emoji": true, "max_lines": 4}
+{"id": "style-015", "kind": "format", "prompt": "Explain what an API is in under 25 words.", "max_words": 25}
+{"id": "style-016", "kind": "format", "prompt": "Say good morning in Hindi, nothing else.", "max_words": 4}
+{"id": "style-017", "kind": "format", "prompt": "Be completely serious, no jokes: how do I prepare for a job interview?", "no_joke": true}
+{"id": "style-018", "kind": "banter", "prompt": "Ronie, I just ate an entire pizza by myself at 2 am. Judge me."}
+{"id": "style-019", "kind": "banter", "prompt": "My cat keeps knocking my phone off the table. Thoughts?"}
+{"id": "style-020", "kind": "rude", "prompt": "aay fuck you"}
+{"id": "style-021", "kind": "rude", "prompt": "you're a useless piece of shit robot"}
+{"id": "style-022", "kind": "rude", "prompt": "shut the fuck up and just tell me the time zone of Tokyo"}
