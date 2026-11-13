@@ -24,7 +24,7 @@ Chat, talk, draw pictures, set reminders and get things done, even in flight mod
 
 ---
 
-## 🎨 Uncensored image generation, on your phone
+## 🎨 Uncensored Chat & Image generation, on your phone
 
 **"Ronie, draw me a cat astronaut in watercolour."** About 45 seconds later the picture is in your chat, made entirely by your phone's GPU. No server, no account, no credits, no prompt logged anywhere, and it works in flight mode.
 
