@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/media/banner.jpg" alt="Ronie Pocket: private AI that runs offline on your phone" width="100%"/>
+<img src="docs/media/banner.jpg" alt="Ronie Pocket: uncensored AI assistant and image generator" width="100%"/>
 
 # Ronie Pocket: uncensored AI assistant and image generator that runs 100% on your phone
 
