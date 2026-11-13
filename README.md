@@ -14,7 +14,7 @@ Chat, talk, draw pictures, set reminders and get things done, even in flight mod
 ![No tracking](https://img.shields.io/badge/tracking-none-22e4ff?style=for-the-badge)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-f2f0ff?style=for-the-badge)](LICENSE)
 
-[**⬇️ Download**](../../releases/latest) · [**🎨 Drawing**](#-uncensored-image-generation-on-your-phone) · [**✨ Features**](#-what-ronie-can-do) · [**🔒 Privacy**](#-privacy-what-leaves-your-phone-and-what-never-does) · [**❓ FAQ**](#-faq) · [**🛠 Build**](#-build-from-source)
+[**⬇️ Download**](../../releases/latest) · [**🎨 Drawing**](#-uncensored-chat--image-generation-on-your-phone) · [**✨ Features**](#-what-ronie-can-do) · [**🔒 Privacy**](#-privacy-what-leaves-your-phone-and-what-never-does) · [**❓ FAQ**](#-faq) · [**🛠 Build**](#-build-from-source)
 
 </div>
 
@@ -59,7 +59,7 @@ Most AI assistants send every word you type to a server, ask you to sign up, and
 ## ✨ What Ronie can do
 
 - 🧠 **A real brain on your phone.** Google's **Gemma 4** runs on your phone's GPU. Ronie is ready about **5 seconds** after you open the app, and the first word of a reply comes in under a second.
-- 🎨 **Draws pictures on your phone, uncensored.** Ask in chat and an image is generated on the phone's GPU in about 45 seconds. [More above](#-uncensored-image-generation-on-your-phone).
+- 🎨 **Draws pictures on your phone, uncensored.** Ask in chat and an image is generated on the phone's GPU in about 45 seconds. [More above](#-uncensored-chat--image-generation-on-your-phone).
 - 🔓 **Uncensored.** No topic filters, no moralising. A **Clean ↔ Sweary** tone slider lets you decide how Ronie talks.
 - 📷 **Sees your photos.** Share a photo, receipt or screenshot and ask about it; receipts become a tidy expense card. (Full brain.)
 - 🎙️ **Talk to him.** Push-to-talk voice input, and replies spoken aloud in Ronie's own voice by an on-device text-to-speech model. Ask by voice and he answers by voice.
