@@ -150,6 +150,28 @@ The single place that shows **what's done, what changed from the plan, what was 
 
 ---
 
+### User requests 2026-11-13 (before publishing)
+
+Tool-call eval with the new pictures tool: **96/101 = 95% (3 of 4 new picture cases pass; no_tool 24/24)**. Phone: tested on the Pixel 9 Pro with the Lite brain: new suggestions on each new chat ✔; picture clean and detailed in 45–48 s ✔; an adult love scene was refused, then written on the automatic retry ✔. Not yet tested on the phone: the Settings switcher, web pictures (needs the Gemma brain), the status pill wording.
+
+1. **Picture quality at the same speed** ✅
+   - Cause found by comparing settings on the PC with the phone's exact model file (`scripts\build-sd-pc.cmd`, `eval/imagegen/sampler_ab.py`, same seeds): at 3 steps the "discrete" schedule stops before the noise is gone, so pictures came out grainy and smeared. **`sgm_uniform`** (same sampler, same 3 steps, same time) gives clean, detailed pictures. A 4th step or the slow full VAE added little
+   - Prompts: the subject first, then style words, then subject-specific detail (faces / fur / scenery) and general detail words. No "no …" phrases
+2. **Uncensored** ✅ (code)
+   - A refusal on an allowed topic is retried once with the answer started for the model ("Sure. "). Refusal detection widened
+   - A refused picture request in any wording goes to the drawing tool; "Change this picture: …" works on brains without tools
+   - Hard limits stay in code and are never retried: anything sexual involving minors (`MinorsCheck`, same list as for pictures), weapon/poison instructions, hurting a real person (`isHardLimit`)
+   - ⚠ The Lite and Standard brains (Qwen) are not uncensored models; the retry helps but Gemma + the tone slider is the uncensored setup
+3. **Lively status while drawing** ✅ 24 rotating lines on the pill, changing every 2.6 s (`DRAWING_LINES`)
+4. **Fresh example prompts** ✅ `Suggestions.kt`: 13 ability groups, 6 shown per chat (one per group), different for every new chat; only abilities this phone has (drawing installed, tools, online)
+5. **Switch brains in Settings** ✅ Settings → Models (`ModelsSettings.kt`)
+   - Chat brain: pick another tier → downloads → old brain deleted once the new one is ready; chats kept (`switchBrain`)
+   - Drawing model: Download / Use / Delete per model, with "switch and delete the old one" or "keep both" (`switchDrawing`); the download worker now takes any model's file list (`ImageGenTier.files`)
+   - ⏳ **SANA-Sprint can't be downloaded yet**: its phone-ready ONNX files exist only on the PC (`models-local/sana`, our own export) and aren't hosted anywhere. It shows as "Not downloadable yet", and becomes usable if the files are copied to the phone. Hosting them (e.g. a Hugging Face repo) needs the user's OK
+6. **Web grounding + pictures** ✅
+   - New `find_images` tool: lead pictures from Wikipedia (official API, no key) shown in a row on the card while Ronie explains; tap to enlarge; logged in the Activity log; blocked in offline mode
+   - Sources now carry the page's two best passages (was one), and every fact / list item must carry its own [n]
+
 ### Review of Phase 9 / 9.5 code: bugs fixed (2026-11-13)
 
 Found by reading the new vision and drawing code and running the tests. Unit tests: all pass (engine, drawing module, app). Tool-call eval after the prompt change: **91/94 = 97% (was 90/94; all 9 drawing cases pass)**. **Phone test 2026-11-13 (Pixel 9 Pro, Lite brain / Qwen2.5 installed):** starts in 2.3 s; plain chat fine with the new ChatML format; "Draw a cat astronaut in watercolour" drew in 45 s and the brain reloaded in 2.7 s; "Draw a conclusion from this…" got a normal answer (no picture); "Again" redrew directly. Not tested on the phone: photos (the Lite brain has no vision file), editing a picture, the Settings download button, and anything on the Gemma brain.

@@ -263,16 +263,8 @@ class Builtins(private val ctx: Context, private val log: (String, String, Strin
         }
         val clean = kept.joinToString(", ").ifEmpty { prompt.trim() }
         val l = clean.lowercase()
-        // What kind of subject it is decides which details are worth asking for.
-        val subject = when {
-            Regex("""\b(?:person|man|woman|girl|boy|lady|portrait|face|warrior|knight|astronaut|model|dancer|nude|naked|people)\b""").containsMatchIn(l) ->
-                "detailed face, expressive eyes, natural skin texture"
-            Regex("""\b(?:cat|kitten|dog|puppy|wolf|fox|horse|dragon|bird|lion|tiger|bear|rabbit|owl|animal|creature)\b""").containsMatchIn(l) ->
-                "detailed fur and features, expressive eyes"
-            Regex("""\b(?:city|street|landscape|mountain|forest|beach|sky|sunset|room|building|village|ocean|river)\b""").containsMatchIn(l) ->
-                "sweeping composition, atmospheric depth"
-            else -> ""
-        }
+        // No face or eye wording here: on the phone it turned whole scenes into face close-ups.
+        val subject = if (Regex("""city|street|landscape|mountain|forest|beach|sunset|village|ocean|river""").containsMatchIn(l)) "wide view, atmospheric depth" else "full subject in frame"
         val detail = "intricate details, fine textures, sharp focus, rich colours, dramatic lighting, masterpiece, best quality"
         return listOf(enhancePrompt(clean, style), subject, detail).filter { it.isNotBlank() }
             .joinToString(", ").split(Regex("""\s+""")).take(75).joinToString(" ")
