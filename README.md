@@ -29,10 +29,11 @@ Chat, talk, draw pictures, set reminders and get things done, even in flight mod
 **"Ronie, draw me a cat astronaut in watercolour."** About 45 seconds later the picture is in your chat, made entirely by your phone's GPU. No server, no account, no credits, no prompt logged anywhere, and it works in flight mode.
 
 <p align="center">
-  <img src="docs/media/drawn-on-phone-cat-astronaut.png" width="300" alt="A cat astronaut in watercolour, drawn on a Pixel 9 Pro by Ronie Pocket in 48 seconds"/>
-  <img src="docs/media/drawn-old-sailor.png" width="300" alt="Portrait of an old sailor with a white beard, generated with the same model and settings Ronie Pocket uses"/>
+  <img src="docs/media/screen-drawing.png" width="260" alt="Ronie Pocket chat: the request 'Draw a cat astronaut in watercolour' and the finished picture card with Save, Share, Again and Edit buttons"/>
+  <img src="docs/media/screen-home.png" width="260" alt="Ronie Pocket home screen with example prompts, including a drawing prompt"/>
+  <img src="docs/media/screen-models.png" width="260" alt="Ronie Pocket Settings, Models: the chat brain and the drawing model in use, with switch and delete options"/>
 </p>
-<p align="center"><sub>Left: drawn on a Pixel 9 Pro in 48 s. Right: the same model and settings, run on a PC. Unedited.</sub></p>
+<p align="center"><sub>Screenshots from a Pixel 9 Pro: a picture drawn in the chat, the home screen, and Settings → Models.</sub></p>
 
 - 🔓 **Uncensored.** Nude, adult, dark, weird: Ronie draws it without lectures or blurred results. The one thing he won't draw is anything sexual involving minors.
 - 📵 **Fully local.** The drawing model (SD-Turbo, 1.8 GB, optional download) runs on your phone's GPU. Your prompts and pictures stay on the device.
