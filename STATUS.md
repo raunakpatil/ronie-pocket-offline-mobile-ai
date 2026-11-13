@@ -332,7 +332,9 @@ Small features and changes asked for during the build. Add every new one here.
 - ✅ `docs/media/banner.svg` (README header) and `docs/media/social-preview.png` (1280×640, for GitHub's social preview)
 - ✅ `docs/launch-kit.md`: repo name `ronie-pocket-offline-mobile-ai`, description, 20 topics, launch order, drafted posts (r/LocalLLaMA, Show HN, X, r/privacy), demo-video script, v0.1.0 release notes, awesome-list targets
 - ✅ Licence: **Apache-2.0** (user, 2026-11-09): `LICENSE` (official text) + `NOTICE` (bge-small MIT, Paradee and misaki Apache-2.0, llama.cpp MIT; downloaded models keep their own licences); README badge and section
-- ⏳ Before going public: publish a v0.1.0 release with the app, record the demo GIF
+- ✅ 2026-11-13: pushed to GitHub as `raunakpatil/ronie-pocket-offline-mobile-ai` (**private** for now; clean history without the phone's serial number, from the local `publish` branch). **v0.1.0 released** with the signed app (`RoniePocket-v0.1.0.apk`, 128 MB, signed with the release key in `~/.ronie`; verified signature, not installed on a phone because the test phone has the debug build)
+- ✅ README leads with on-device uncensored image generation (section, badge, comparison row, FAQ, two real sample pictures)
+- ⏳ Still to do: make the repo public, upload the social preview image, record the demo GIF, install-test the release app on a clean phone
 
 ### Phase 7 plan (2026-11-09)
 - ✅ Detailed build plan written: [phase7-plan.md](phase7-plan.md). One brain per process (`BrainHost`) shared by chat and background jobs; IMAP + app password (read-only, drafts only after a confirm card); rules prefilter then Gemma triage with a plain prompt; notifications with feedback buttons (training data for Phase 11); mail tools with injection tests; tasks moved into SQLCipher; daily brief
