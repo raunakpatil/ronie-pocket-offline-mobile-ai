@@ -16,9 +16,9 @@ Everything to paste into GitHub and the launch posts, plus the order to do it in
 | Field | Value |
 |---|---|
 | **Name** | `ronie-pocket-offline-mobile-ai` |
-| **Description** | 📱 Ronie Pocket: an uncensored AI assistant that runs 100% on your phone. No account, no cloud, no tracking: your chats never leave your device. Gemma 4 on the phone's own GPU with voice, memory, tools and optional web search. |
+| **Description** | 📱 Ronie Pocket: an uncensored AI assistant and image generator that runs 100% on your phone. No account, no cloud, no tracking: your chats and pictures never leave your device. Gemma 4 + on-device image generation, voice, memory, tools and optional web search. |
 | **Website** | `https://raunakpatil.com/ronie` (or a landing page later) |
-| **Topics** | `offline-ai` `local-llm` `on-device-ai` `mobile-ai` `ai-assistant` `uncensored-ai` `privacy` `llama-cpp` `gemma` `gemma-4` `on-device-llm` `voice-assistant` `text-to-speech` `personal-assistant` `mcp` `vulkan` `smartphone` `no-tracking` `kotlin` `jetpack-compose` |
+| **Topics** | `offline-ai` `local-llm` `on-device-ai` `mobile-ai` `ai-assistant` `uncensored-ai` `privacy` `llama-cpp` `gemma` `gemma-4` `on-device-llm` `voice-assistant` `text-to-speech` `personal-assistant` `mcp` `vulkan` `smartphone` `image-generation` `stable-diffusion` `kotlin` |
 | **Social preview** | Settings → General → Social preview → upload `docs/media/social-preview.png` (1280×640) |
 | Releases / Packages / Deployments | Show Releases; hide the others |
 | Discussions | **On**, with categories Q&A, Ideas and Show & tell. It turns questions into community activity, and active repos rank higher |
